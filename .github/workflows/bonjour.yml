@@ -1,11 +1,13 @@
-name: Bonjour
-on:
+name: Bonjour #nom du workflow
+
+on: #declenche le workflow lors d'un push
   push:
 
-jobs:
+jobs: # Nom du job
   dire-bonjour:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Spécifie l'environnement d'exécution du job
 
-    steps:
-      - name: Afficher le message
-        run: echo "Bonjour depuis GitHub Actions !"
+    steps: # Liste des étapes à exécuter
+      - name: Afficher le message # Nom de l'étape
+        run: echo "Bonjour depuis GitHub Actions !" # Commande à exécuter pour afficher le message
+        
