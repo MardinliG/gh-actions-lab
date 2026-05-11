@@ -1,13 +1,18 @@
-name: Bonjour #nom du workflow
+name: Workflow d'initiation #nom du workflow
 
 on: #declenche le workflow lors d'un push
   push:
 
 jobs: # Nom du job
-  dire-bonjour:
+  saluer-le-monde:
     runs-on: ubuntu-latest # Spécifie l'environnement d'exécution du job
 
     steps: # Liste des étapes à exécuter
       - name: Afficher le message # Nom de l'étape
         run: echo "Bonjour depuis GitHub Actions !" # Commande à exécuter pour afficher le message
-        
+
+      - name: Afficher la date # Nom de l'étape
+        run: echo "La date est $(date)" # Commande à exécuter pour afficher la date
+
+      - name: Afficher l'utilisateur déclencheur # Nom de l'étape
+        run: echo "Le nom de l'utilisateur est ${{ github.actor }}" # Commande à exécuter pour afficher le nom de l'utilisateur
