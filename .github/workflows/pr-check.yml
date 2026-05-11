@@ -1,0 +1,17 @@
+name: PR Check
+
+on:
+  pull_request:
+    branches:
+      - main # Se déclenche uniquement sur les PR vers main
+
+jobs:
+  infos-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Afficher le numéro de la PR
+        run: echo "PR numéro ${{ github.event.pull_request.number }}"
+
+      - name: Afficher l'auteur de la PR
+        run: echo "Ouverte par ${{ github.event.pull_request.user.login }}"

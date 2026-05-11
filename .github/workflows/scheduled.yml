@@ -1,0 +1,17 @@
+name: Scheduled
+
+on:
+  schedule:
+    - cron: "0 9 * * 1-5" # Lundi au vendredi à 09:00 UTC
+  workflow_dispatch: # Déclenchement manuel depuis l'onglet Actions
+
+jobs:
+  tache-planifiee:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Afficher le type de déclenchement
+        run: echo "Déclenché via ${{ github.event_name }}"
+
+      - name: Afficher l'heure
+        run: date

@@ -1,0 +1,14 @@
+name: Docs Only
+
+on:
+  push:
+    paths:
+      - "docs/**" # Se déclenche uniquement si un fichier dans docs/ est modifié
+
+jobs:
+  verif-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Confirmer le déclenchement
+        run: echo "Des fichiers docs/ ont été modifiés"
