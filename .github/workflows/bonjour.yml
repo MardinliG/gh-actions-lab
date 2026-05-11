@@ -15,4 +15,4 @@ jobs: # Nom du job
         run: echo "La date est $(date)" # Commande à exécuter pour afficher la date
 
       - name: Afficher l'utilisateur déclencheur # Nom de l'étape
-        run: echo "Le nom de l'utilisateur est ${{ github.actor }}" # Commande à exécuter pour afficher le nom de l'utilisateur
+        run: echo "Le nom de l'utilisateur est ${{ github.actor }}" # Commande à exécuter pour afficher le nom de l'utilisateur declencheur
